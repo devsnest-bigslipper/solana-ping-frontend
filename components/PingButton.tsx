@@ -1,4 +1,4 @@
-import { useConnection } from "@solana/wallet-adapter-react";
+import { useConnection,useWallet } from "@solana/wallet-adapter-react";
 import { FC } from 'react';
 import * as Web3 from "@solana/web3.js";
 import styles from '../styles/Home.module.css';
@@ -6,12 +6,12 @@ const PROGRAM_ID = new Web3.PublicKey("ChT1B39WKLS8qUrkLvFDXMhEJ4F1XZzwUNHUt4AU9
 const PROGRAM_DATA_ADDRESS = new Web3.PublicKey("Ah9K7dQ8EHaZqcAsgBW8w37yN2eAy3koFmUn4x3CJtod");
 
 
-
 export const PingButton: FC = () => {
 
-    const onClick = () => {
       const { connection } = useConnection();
       const { publicKey, sendTransaction } = useWallet();
+
+    const onClick = () => {
       
       if (!connection||!publicKey) {
           alert("please connect your wallet first!");
