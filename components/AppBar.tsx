@@ -1,6 +1,6 @@
-import { FC } from 'react'
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
+import { FC } from 'react';
+import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 
 export const AppBar: FC = () => {
     return (
@@ -9,5 +9,5 @@ export const AppBar: FC = () => {
             <span>Wallet-Adapter Example</span>
             <button>Connect</button>
         </div>
-    )
+    );
 }
